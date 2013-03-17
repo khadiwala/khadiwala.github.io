@@ -3,12 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>BLOGOSAURUS</title>
+	<title>Blogosaurus</title>
 	<meta name="author" content="Ravi Khadiwala">
 
 	
-	<meta name="description" content=" Blog Archives
-">
+	<meta name="description" content="Mar 16th, 2013 TEDAS Twitter based Event Detection and Analysis System Twitter is a distributed, fast, and localized system for spreading &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -16,7 +15,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="/atom.xml" rel="alternate" title="BLOGOSAURUS" type="application/atom+xml">
+	<link href="/atom.xml" rel="alternate" title="Blogosaurus" type="application/atom+xml">
 	
 	<link rel="canonical" href="http://mrgrieves.github.com/">
 	<link href="/favicon.png" rel="shortcut icon">
@@ -41,8 +40,8 @@
 		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("ravi.khadiwala@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;'");
 	</script>
 </div>
-<h1><a href="/">BLOGOSAURUS</a></h1>
-<p class="subtitle">An extinct fickle dinosaur</p>
+<h1><a href="/">Blogosaurus</a></h1>
+<p class="subtitle"></p>
 <nav id="main-nav"><ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
@@ -53,6 +52,8 @@
 <nav id="sub-nav">
 	<div class="social">
 		
+		
+		<a class="google" href="https://plus.google.com/105364233255642133210?rel=author" title="Google+">Google+</a>
 		
 		
 		
@@ -68,9 +69,7 @@
 	</div>
 </nav>
 <hgroup>
-  <h1><a href="/">BLOGOSAURUS</a></h1>
-  
-    <h2>An extinct fickle dinosaur</h2>
+  <h1><a href="/">Blogosaurus</a></h1>
   
 </hgroup>
 
@@ -84,6 +83,136 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-16T21:07:00-05:00" data-updated="true" itemprop="datePublished">Mar 16<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/03/16/tedas/" itemprop="url">TEDAS</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h1>Twitter based Event Detection and Analysis System</h1>
+
+<p>Twitter is a distributed, fast, and localized system for spreading information. It&#8217;s also noisy, inaccurate, and completly disorganized.
+Discovery tweets that are related to important events, for example crimes and natural disasters, and providing georgraphical context could be a useful way to propogate important news at speeds that traditional media cannot accomplish.
+A demo of TEDAS is avaliable <a href="http://canary.cs.illinois.edu/crimedetection/index_ui.php">here</a>, with an assoiciated <a href="http://mias.illinois.edu/files/Twitter%20Event%20Detection%20demo%20paper.pdf">paper</a> from icde 2012.</p>
+
+<h2>Crawling and Classification</h2>
+
+<p>We began with a small set of seed keywords that brought in a reasonable proportion of crime related tweets. We manually labeled a few thousand of these tweets (oh god it was horrible), and had a clean dataset on which to base crawling and classification.
+Based on the labeled data, keyword based textual features, and social features we created an SVM classifier. We then iterativley improve both crawling and classification by revaluating the proportion of relevant tweets that a keyword captures, removing keywords that bring in a high proportion of non event related tweets and adding keywords that are present in a high number of event related tweets. This is important because Twitter limits the number of tweets returned by its API, thus keywords that bring a lot of noise waste precious requests. Furthermore if a keyword becomes more relevant to important events or becomes co-opted by some annoying pop culture event, the system can adapt. Here is an example of finding new potential rules based on seed keywords:</p>
+
+<table align="center"> 
+<col width = "100">
+<col width = "100">
+        <tr>
+            <td> <b> Seeds </b> </td>
+            <td> <b> Discoveries </b> </td>
+        </tr>
+        <tr>
+            <td> investigate </td>
+            <td> ap breaking </td>
+        </tr>
+        <tr>
+            <td> robbery </td>
+            <td> word from </td>
+        </tr>
+        <tr>
+            <td> arrest</td>
+            <td> demonstrators </td>
+        </tr> 
+        <tr>
+            <td> officier </td>
+            <td> adventure </td>
+        </tr> 
+        <tr>
+            <td></td>
+            <td> riot </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> violate arrest </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> abducted </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> wasn&#8217;t carrying drugs </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> vehicle </td>
+        </tr>
+</table>
+
+
+<p>You can see that the discovery is highly dependant on popular subjects at the time of crawling.</p>
+
+<p>A unique benefit to Twitter is the presence of social features. Number of followers, hashtags, retweets, all serve as useful indicators of the accuracy and relevance of tweets. Especially since traditional text based classification techniques may falter due to the short character limit of tweets (140) and the unique language tweets can take. We also can consider temporal and spatial features, like if we see several tweets at the same time and location with similar content we can infer that an important event is happening there.</p>
+
+<table>
+    <col width = "200">
+    <col width = "100">
+    <col width = "100">
+    <col width = "100">
+    <tr> 
+        <td> <b> Classifier </b> </td><td><b> Accuracy </b></td><td><b> Precision </b></td><td><b> Recall </b></td>
+    </tr>
+    <tr> 
+        <td> Text Only (Base Line) </td><td> .785924 </td><td> .818 </td><td> .606</td>
+    </tr>
+    <tr> 
+        <td> Temporal </td><td> .798039 </td><td> .831 </td><td> .63</td>
+    </tr>
+    <tr> 
+        <td> (Social) User Features </td><td> .797059 </td><td> .824 </td><td> .635</td>
+    </tr>
+    <tr> 
+        <td> (Social) Tweet Features </td><td> .812745 </td><td> .805 </td><td> .71</td>
+    </tr>
+    <tr> 
+        <td> All </td><td> .824510 </td><td> .829 </td><td> .715</td>
+    </tr>
+</table>
+
+
+<h2>Location Resolution</h2>
+
+<p>GPS tagged tweets are easy. Otherwise some users provide a city or state level location string in a profile, and we simply map to the center of the location. If the tweet happens to contain something that looks like an address we can pick up with a regex we use that instead.</p>
+
+<h2>Ranking Results</h2>
+
+<p>In order to present important tweets first in the UI we took a simple approach that proved to be effective. Pagerank like algorithms aren&#8217;t practical because links between tweets aren&#8217;t nessacarily common nor indicative of importance. Similarly an approach based on users connections can measure the authority of a source, but this alone is also a poor indicator of importance.
+We chose a learn a function via linear regression that assigns a real number rank to each crime related tweet based on a similar set of features we used in general classification. This combines learned importance of certain keywords, use authority, and tweet spread.</p>
+
+<h2>Implementation</h2>
+
+<p>We implemented TEDAS based on Java and PHP with support of MySQL, Lucene, Twitter API, and Google Maps API. At the time of writing, the system has indexed
+over two million CDE tweets and about a million users’ information, and continues to index at rate of about 30,000 new CDE tweets per day. It supports detecting events related to crimes, accidents, and disasters.</p>
+
+		
+		
+	</div>
+
+</article>
 
 </div>
 <nav id="pagenavi">
