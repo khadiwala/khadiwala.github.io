@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Blogosaurus]]></title>
+  <title><![CDATA[Ramblesaurus]]></title>
   <link href="http://mrgrieves.github.com/atom.xml" rel="self"/>
   <link href="http://mrgrieves.github.com/"/>
-  <updated>2013-03-16T23:11:56-05:00</updated>
+  <updated>2013-03-16T23:56:01-05:00</updated>
   <id>http://mrgrieves.github.com/</id>
   <author>
     <name><![CDATA[Ravi Khadiwala]]></name>
