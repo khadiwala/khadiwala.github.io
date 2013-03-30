@@ -4,7 +4,7 @@
   <title><![CDATA[Ramblesaurus]]></title>
   <link href="http://mrgrieves.github.com/atom.xml" rel="self"/>
   <link href="http://mrgrieves.github.com/"/>
-  <updated>2013-03-30T09:24:37-05:00</updated>
+  <updated>2013-03-30T10:08:53-05:00</updated>
   <id>http://mrgrieves.github.com/</id>
   <author>
     <name><![CDATA[Ravi Khadiwala]]></name>
@@ -52,7 +52,6 @@ I implemented Thistlethwaite&#8217;s 4 phase algorithm for solving the Rubik&#82
 <li><p>Compilation errors for unused variables - makes it annoying to debug pieces of code by commenting things out</p></li>
 <li><p>Anonymous recursive functions must be preceded by a type definition</p></li>
 <li><p>Must include return statements in functions even if unreachable</p></li>
-<li><p>Using the value,ok paradigm is nice, but ocassionally being able to return null/nil would make sense</p></li>
 </ul>
 
 
