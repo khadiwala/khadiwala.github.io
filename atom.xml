@@ -4,7 +4,7 @@
   <title><![CDATA[Ramblesaurus]]></title>
   <link href="http://mrgrieves.github.com/atom.xml" rel="self"/>
   <link href="http://mrgrieves.github.com/"/>
-  <updated>2013-03-17T01:57:38-05:00</updated>
+  <updated>2013-03-30T09:24:37-05:00</updated>
   <id>http://mrgrieves.github.com/</id>
   <author>
     <name><![CDATA[Ravi Khadiwala]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rubiks Cube Solver in Go]]></title>
+    <link href="http://mrgrieves.github.com/blog/2013/03/28/rubiks-cube-solver-in-go/"/>
+    <updated>2013-03-28T23:55:00-05:00</updated>
+    <id>http://mrgrieves.github.com/blog/2013/03/28/rubiks-cube-solver-in-go</id>
+    <content type="html"><![CDATA[<h1>Shut up about Go</h1>
+
+<p>Despite being a few years after its initial release, I can&#8217;t stop hearing about Go.
+I decided to rework a simple enough algorithm I understood to learn basic Go syntax, and see how it performs in the memory and speed departments.
+I implemented Thistlethwaite&#8217;s 4 phase algorithm for solving the Rubik&#8217;s Cube. I drew most of my inspiration from this fairly nice C++ <a href="http://tomas.rokicki.com/cubecontest/stefan1.txt">implementation</a> I found from Stefan Pochmann.</p>
+
+<h1>Thistlethwaite&#8217;s Algorithm</h1>
+
+<p>The basic idea is that the search for a solved cube is broken into four smaller sequential searches. Once in a phase we limit our moves to ensure we don&#8217;t exit this phase. A set of moves that can be applied to a solved cube defines a phase, the 4 phases are nested, the last one being a solved cube.</p>
+
+<p>G<sub> 0 </sub> = &lt; U D L R F B ></p>
+
+<p>G<sub>1</sub> = &lt; U2 D2 L R F B ></p>
+
+<p>G<sub>2</sub> = &lt; U2 D2 L R F2 B2 ></p>
+
+<p>G<sub>3</sub> = &lt; U2 D2 L2 R2 F2 B2 ></p>
+
+<p>G<sub>4</sub> = &lt;></p>
+
+<p>Basically a state is in phase i if, starting at the completed state, you can reach this state only by using moves in G<sub>i</sub>. I used iterative deepening DFS as opposed to BFS to save on memory at the cost of computation, since when I tried to use straight BFS I would run out of ram. At somepoint I may rewrite the cube structure to be easier on memory so I can go back to normal BFS. Another thing I&#8217;d like to do is to find a simpler representation of the cube that a human could input, instead of being forced to also input the orientations of edges and corner, but still be able to determine the phase easily based on this representation. In general the solver takes 30-40 moves to solve a randomly scrambled cube.</p>
+
+<p><a href="http://www.jaapsch.net/puzzles/thistle.htm">Thistlethwaite&#8217;s original description</a></p>
+
+<p><a href="http://www.jaapsch.net/puzzles/compcube.htm#kocal">Kociemba&#8217;s faster two phase algorithm</a></p>
+
+<h1>Thoughts on Go</h1>
+
+<p>Overall Go is without competition the most fun I&#8217;ve had with a &#8220;systems&#8221; programming language. The type inference is awesome, there are some powerful abstractions like slices, and go routines and channels are a killer language feature (which of course I did not use much of here). I think Go also captures what is most useful about object oriented programming with interfaces, without getting bogged down and forcing it on you, although the syntax is not super clear at first. I am sometimes uncomfortable with the occasional abstraction of pointers, like the automatic type conversion when you call a method for a struct its pointer. It only adds confusion, especially because you shouldn&#8217;t be depending on Go for this in most cases. Most of the other things I did not enjoy were nitpicks:</p>
+
+<ul>
+<li><p>Compilation errors for unused variables - makes it annoying to debug pieces of code by commenting things out</p></li>
+<li><p>Anonymous recursive functions must be preceded by a type definition</p></li>
+<li><p>Must include return statements in functions even if unreachable</p></li>
+<li><p>Using the value,ok paradigm is nice, but ocassionally being able to return null/nil would make sense</p></li>
+</ul>
+
+
+<p>My only real philisophical complaint revolve around there being a little too much magic to be a low level language, but not enough to prevent you from having to think about internals.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TEDAS]]></title>
