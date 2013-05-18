@@ -2,15 +2,19 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://mrgrieves.github.com/blog/2013/03/16/tedas/</loc>
-        <lastmod>2013-03-16T23:11:56-05:00</lastmod>
+        <lastmod>2013-05-17T22:06:40-05:00</lastmod>
     </url>
     <url>
         <loc>http://mrgrieves.github.com/blog/2013/03/28/rubiks-cube-solver-in-go/</loc>
-        <lastmod>2013-03-30T10:08:40-05:00</lastmod>
+        <lastmod>2013-05-17T22:17:55-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mrgrieves.github.com/blog/2013/05/17/thats-what-she-said/</loc>
+        <lastmod>2013-05-17T22:24:07-05:00</lastmod>
     </url>
     <url>
         <loc>http://mrgrieves.github.com/blog/archives/</loc>
-        <lastmod>2013-03-30T10:08:40-05:00</lastmod>
+        <lastmod>2013-05-17T22:24:07-05:00</lastmod>
     </url>
     <url>
         <loc>http://mrgrieves.github.com/robots.txt</loc>
@@ -18,7 +22,7 @@
     </url>
     <url>
         <loc>http://mrgrieves.github.com/</loc>
-        <lastmod>2013-03-30T10:08:40-05:00</lastmod>
+        <lastmod>2013-05-17T22:24:07-05:00</lastmod>
     </url>
     <url>
         <loc>http://mrgrieves.github.com/about/</loc>
