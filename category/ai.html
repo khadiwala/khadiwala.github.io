@@ -1,88 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-				<title>Ramblesaurus &mdash; Articles in Category AI</title>
-		<meta charset="utf-8" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
-		<!-- Using MathJax, with the delimiters $ -->
-		<!-- Conflict with pygments for the .mo and .mi -->
-		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-		  "HTML-CSS": {
-		  styles: {
-		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-		  },
-		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
-		  });
-		  MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
-		  var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
-		  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
-		  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
-		  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
-		  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
-		  });
-		  MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
-		  var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
-		  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
-		  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
-		  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
-		  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
-		  });
-		</script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-		<link rel='stylesheet' id='oswald-css'  href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2' type='text/css' media='all' />
-		<style type="text/css">
-			body.custom-background { background-color: #f5f5f5; }
-		</style>
-		<link rel="alternate" type="application/atom+xml"
-			title="Ramblesaurus — Flux Atom"
-			href="/" /> 
-				<!--[if lte IE 8]><script src="/theme/js/html5shiv.js"></script><![endif]-->
-				</head>
+    <meta charset="utf-8">
+    <title>Ramblesaurus</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ravi Khadiwala">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body class="home blog custom-background " >
-	<div id="container">
-		<div id="header">
-				<h1 id="site-title"><a href="">Ramblesaurus</a></h1>
-						</div><!-- /#banner -->
-		
-		<div id="menu">
-			<div class="menu-navigation-container">
-				<ul id="menu-navigation" class="menu">
-										  						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pages/about-me.html">"About Me"</a></li>
-					  										  						<li class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/category/ai.html">AI</a></li>
-					  										
-				</ul>
-			</div> <!--/#menu-navigation-container-->
-		</div><!-- /#menu -->
-		
-		<div class="page-title">
-			<div class="page-title">
-	<h2>Filed under <span>AI</span> &hellip;</h2>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://mrgrieves.github.io/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="http://mrgrieves.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/local.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/pygments.css" rel="stylesheet">
+
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	  "HTML-CSS": {
+	  styles: {
+	  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+	  },
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+	  });
+	  MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+	  });
+	  MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+	  });
+	</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="http://mrgrieves.github.io">Ramblesaurus</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+                    
+                            <li><a href="http://mrgrieves.github.io/pages/about.html">About</a></li>
+                        </ul>
+        </div>
+        
+    </div>
+    </div>
 </div>
-		</div>
-	
-		<div id="contents">
-						<div class="post type-post status-publish format-standard hentry category-general" id="post">
-	<div class="entry-meta">
-		<div class="date"><a href="/thats-what-she-said.html">Fri 17 May 2013</a></div>
-				<span class="byline">By <a href="/author/ravi-khadiwala.html">Ravi Khadiwala</a></span>
-							<div class="comments"><a href="/thats-what-she-said.html#disqus_thread" title="Comment on That's What She Said">comments</a></div>
-							<span class="cat-links"><a href="/category/ai.html" title="View all posts in AI" rel="category tag">AI</a></span>
-			</div> <!-- /#entry-meta -->
-	<div class="main">
-		<h2 class="entry-title">
-			<a href="/thats-what-she-said.html" title="Permalink to That's What She Said" rel="bookmark">That's What She Said</a>
-		</h2>
-		<div class="entry-content">
-			<div class="ipynb"><div class="text_cell_render border-box-sizing rendered_html">
+
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+                
+
+<link rel="stylesheet" href="/theme/ipython.css">
+        
+
+
+    <div class='article'>
+        <div class="content-title">
+            <a href="http://mrgrieves.github.io/thats-what-she-said.html"><h1>That's What She Said</h1></a>
+            Fri 17 May 2013
+
+by <a class="url fn" href="http://mrgrieves.github.io/author/ravi-khadiwala.html">Ravi Khadiwala</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><div class="ipynb"><div class="text_cell_render border-box-sizing rendered_html">
 <h1 class="ipynb">That's What She Said:</h1>
 <h1 class="ipynb">Automated Detection of Innuendos</h1>
 <p>Here I describe my second pass at writing a classifier that can detect sentences that are likely to contain sexual inuendos. Both implementations can be found on <a href="https://github.com/mrgrieves/ThatsWhatSheSaid/tree/sk-twss">github</a>, as well as this ipython notebook (you'll need the data folder to use this notebook), which is by far the most interesting way to read this post. Although this is pretty much a joke project, since I wrote the original project I've really grown to like the <a href="http://scikit-learn.org/stable/">scikit-learn</a> library, as opposed to using the basic classifiers in nltk. I got substantially better performance and memory usage, and used a cool feature extraction technique that is well suited to bag of words models. Also I learned the wonder that is blogging with ipython notebooks, which is just too cool. Skip to the bottom to see some examples of the classifier in action, or try the old version here <a href="http://twssd.heroku.com">here</a>.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 class="ipynb">Process the Data</h1>
+<h1 class="ipynb">Data</h1>
 <p>The data folder of the github project contains three sources. Two are of negative instances: one scraped from fmylife and the other from texts from last night. The thought here is that these samples would be written a similar tone and style to twss instances without being twss worthy. The positive samples are scraped from twssStories.com. The punctuation has already been processed out, and the data has been slightly cleaned. This <a href="http://blog.echen.me/2011/05/05/twss-building-a-thats-what-she-said-classifier/">data</a> (also availiable in my repo) was scraped by Edwin Chen, and the approach seems to be from this <a href="http://www.aclweb.org/anthology-new/P/P11/P11-2016.pdf">paper</a></p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
@@ -1019,183 +1036,118 @@ contains(girlfriend) = True                0 : 1      =      9.5 : 1.0
 </code></pre>
 <p>This is the ranked list of the 100 most informative features when I did this experiment with naieve bayes. The first column is the feature, the second column the ratio of positives to negatives or negatives to positive with that feature present.</p>
 <p>And with that, all possible remnants of humor left in the That's What She Said jokes have been taken out behind the shed and shot.</p>
-</div></div>
-		</div> <!--/#entry-content-->
-			</div> <!--/#main-->
-</div>  <!--/#post-->			<div class="post type-post status-publish format-standard hentry category-general" id="post">
-	<div class="entry-meta">
-		<div class="date"><a href="/rubiks-cube-solver-in-go.html">Thu 28 March 2013</a></div>
-				<span class="byline">By <a href="/author/ravi-khadiwala.html">Ravi Khadiwala</a></span>
-							<div class="comments"><a href="/rubiks-cube-solver-in-go.html#disqus_thread" title="Comment on "Rubiks Cube Solver in Go"">comments</a></div>
-							<span class="cat-links"><a href="/category/ai.html" title="View all posts in AI" rel="category tag">AI</a></span>
-			</div> <!-- /#entry-meta -->
-	<div class="main">
-		<h2 class="entry-title">
-			<a href="/rubiks-cube-solver-in-go.html" title="Permalink to "Rubiks Cube Solver in Go"" rel="bookmark">"Rubiks Cube Solver in Go"</a>
-		</h2>
-		<div class="entry-content">
-			<h2>Shut up about go already</h2>
+</div></div></div>
+        <hr />
+    </div>
+		
+    
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="http://mrgrieves.github.io/rubiks-cube-solver-in-go.html"><h2>"Rubiks Cube Solver in Go"</h2></a>
+        <div class= "well small"> Thu 28 March 2013
+
+by <a class="url fn" href="http://mrgrieves.github.io/author/ravi-khadiwala.html">Ravi Khadiwala</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>Shut up about go already</h2>
 <p>Despite being a few years after its initial release, I can't stop hearing about Go. 
 I decided to rework a simple enough algorithm I understood to learn basic Go syntax, and see how it performs in the memory and speed departments. 
-I implemented Thistlethwaite's 4 phase algorithm for solving the Rubik's Cube. I drew most of my inspiration from this fairly nice C++ <a href="http://tomas.rokicki.com/cubecontest/stefan1.txt">implementation</a> I found from Stefan Pochmann.</p>
-<h3>Thistlethwaite's Algorithm</h3>
-<p>The basic idea is that the search for a solved cube is broken into four smaller sequential searches. Once in a phase we limit our moves to ensure we don't exit this phase. A set of moves that can be applied to a solved cube defines a phase, the 4 phases are nested, the last one being a solved cube.</p>
-<p>
-$$ G_0 =  \langle U,D,L,R,F,B \rangle $$
-$$ G_1 = \langle U2, D2, L, R, F,  B \rangle $$
-$$ G_2 = \langle U2, D2, L, R, F2, B2 \rangle $$
-$$ G_3 = \langle U2, D2, L2,R2,F2, B2 \rangle $$
-$$ G_4 = \langle \rangle $$
-</p>
+I implemented Thistlethwaite ...</p> <a class="btn btn-info xsmall" href="http://mrgrieves.github.io/rubiks-cube-solver-in-go.html">read more</a></div>
+    </div>	
+				
+    
+ 
+        
 
-<p>Basically a state is in phase i if, starting at the completed state, you can reach this state only by using moves in G<sub>i</sub>. I used iterative deepening DFS as opposed to BFS to save on memory at the cost of computation, since when I tried to use straight BFS I would run out of ram. At somepoint I may rewrite the cube structure to be easier on memory so I can go back to normal BFS. Another thing I'd like to do is to find a simpler representation of the cube that a human could input, instead of being forced to also input the orientations of edges and corner, but still be able to determine the phase easily based on this representation. In general the solver takes 30-40 moves to solve a randomly scrambled cube.</p>
-<p><a href="http://www.jaapsch.net/puzzles/thistle.htm">Thistlethwaite's original description</a></p>
-<p><a href="http://www.jaapsch.net/puzzles/compcube.htm#kocal">Kociemba's faster two phase algorithm</a></p>
-<h3>Thoughts on Go</h3>
-<p>Overall Go is without competition the most fun I've had with a "systems" programming language. The type inference is awesome, there are some powerful abstractions like slices, and go routines and channels are a killer language feature (which of course I did not use much of here). I think Go also captures what is most useful about object oriented programming with interfaces, without getting bogged down and forcing it on you, although the syntax is not super clear at first. I am sometimes uncomfortable with the occasional abstraction of pointers, like the automatic type conversion when you call a method for a struct its pointer. It only adds confusion, especially because you shouldn't be depending on Go for this in most cases. Most of the other things I did not enjoy were nitpicks:</p>
-<ul>
-<li>
-<p>Compilation errors for unused variables - makes it annoying to debug pieces of code by commenting things out</p>
-</li>
-<li>
-<p>Anonymous recursive functions must be preceded by a type definition</p>
-</li>
-<li>
-<p>Must include return statements in functions even if unreachable</p>
-</li>
-</ul>
-<p>My only real philisophical complaint revolve around there being a little too much magic to be a low level language, but not enough to prevent you from having to think about internals.</p>
-		</div> <!--/#entry-content-->
-			</div> <!--/#main-->
-</div>  <!--/#post-->			<div class="post type-post status-publish format-standard hentry category-general" id="post">
-	<div class="entry-meta">
-		<div class="date"><a href="/Twitter based Event Detection and Analysis System.html">Sat 16 March 2013</a></div>
-				<span class="byline">By <a href="/author/ravi-khadiwala.html">Ravi Khadiwala</a></span>
-							<div class="comments"><a href="/Twitter based Event Detection and Analysis System.html#disqus_thread" title="Comment on "TEDAS"">comments</a></div>
-							<span class="cat-links"><a href="/category/ai.html" title="View all posts in AI" rel="category tag">AI</a></span>
-			</div> <!-- /#entry-meta -->
-	<div class="main">
-		<h2 class="entry-title">
-			<a href="/Twitter based Event Detection and Analysis System.html" title="Permalink to "TEDAS"" rel="bookmark">"TEDAS"</a>
-		</h2>
-		<div class="entry-content">
-			<h2>Twitter based Event Detection and Analysis System</h2>
+ 
+
+    <div class='article'>
+        <a href="http://mrgrieves.github.io/Twitter based Event Detection and Analysis System.html"><h2>"TEDAS"</h2></a>
+        <div class= "well small"> Sat 16 March 2013
+
+by <a class="url fn" href="http://mrgrieves.github.io/author/ravi-khadiwala.html">Ravi Khadiwala</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>Twitter based Event Detection and Analysis System</h2>
 <hr />
 <p>Twitter is a distributed, fast, and localized system for spreading information. It's also noisy, inaccurate, and completly disorganized. 
-Discovery tweets that are related to important events, for example crimes and natural disasters, and providing georgraphical context could be a useful way to propogate important news at speeds that traditional media cannot accomplish.
-A demo of TEDAS is avaliable <a href="http://canary.cs.illinois.edu/crimedetection/index_ui.php">here</a>, with an assoiciated <a href="http://mias.illinois.edu/files/Twitter%20Event%20Detection%20demo%20paper.pdf">paper</a> from icde 2012.</p>
-<h2>Crawling and Classification</h2>
-<p>We began with a small set of seed keywords that brought in a reasonable proportion of crime related tweets. We manually labeled a few thousand of these tweets (oh god it was horrible), and had a clean dataset on which to base crawling and classification.
-Based on the labeled data, keyword based textual features, and social features we created an SVM classifier. We then iterativley improve both crawling and classification by revaluating the proportion of relevant tweets that a keyword captures, removing keywords that bring in a high proportion of non event related tweets and adding keywords that are present in a high number of event related tweets. This is important because Twitter limits the number of tweets returned by its API, thus keywords that bring a lot of noise waste precious requests. Furthermore if a keyword becomes more relevant to important events or becomes co-opted by some annoying pop culture event, the system can adapt. Here is an example of finding new potential rules based on seed keywords:</p>
-<table align="center"> 
-<col width = "100">
-<col width = "100">
-        <tr>
-            <td> <b> Seeds </b> </td>
-            <td> <b> Discoveries </b> </td>
-        </tr>
-        <tr>
-            <td> investigate </td>
-            <td> ap breaking </td>
-        </tr>
-        <tr>
-            <td> robbery </td>
-            <td> word from </td>
-        </tr>
-        <tr>
-            <td> arrest</td>
-            <td> demonstrators </td>
-        </tr> 
-        <tr>
-            <td> officier </td>
-            <td> adventure </td>
-        </tr> 
-        <tr>
-            <td></td>
-            <td> riot </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> violate arrest </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> abducted </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> wasn't carrying drugs </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> vehicle </td>
-        </tr>
-</table>
+Discovery tweets that are related to important events, for example crimes and natural disasters, and providing georgraphical context could be a useful way to ...</p> <a class="btn btn-info xsmall" href="http://mrgrieves.github.io/Twitter based Event Detection and Analysis System.html">read more</a></div>
+    </div>	
+				
+            <div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-<p>You can see that the discovery is highly dependant on popular subjects at the time of crawling. </p>
-<p>A unique benefit to Twitter is the presence of social features. Number of followers, hashtags, retweets, all serve as useful indicators of the accuracy and relevance of tweets. Especially since traditional text based classification techniques may falter due to the short character limit of tweets (140) and the unique language tweets can take. We also can consider temporal and spatial features, like if we see several tweets at the same time and location with similar content we can infer that an important event is happening there.</p>
-<table>
-    <col width = "200">
-    <col width = "100">
-    <col width = "100">
-    <col width = "100">
-    <tr> 
-        <td> <b> Classifier </b> </td><td><b> Accuracy </b></td><td><b> Precision </b></td><td><b> Recall </b></td>
-    </tr>
-    <tr> 
-        <td> Text Only (Base Line) </td><td> .785924 </td><td> .818 </td><td> .606</td>
-    </tr>
-    <tr> 
-        <td> Temporal </td><td> .798039 </td><td> .831 </td><td> .63</td>
-    </tr>
-    <tr> 
-        <td> (Social) User Features </td><td> .797059 </td><td> .824 </td><td> .635</td>
-    </tr>
-    <tr> 
-        <td> (Social) Tweet Features </td><td> .812745 </td><td> .805 </td><td> .71</td>
-    </tr>
-    <tr> 
-        <td> All </td><td> .824510 </td><td> .829 </td><td> .715</td>
-    </tr>
-</table>
+    <li class="active"><a href="http://mrgrieves.github.io/category/ai.html">1</a></li>
 
-<h2>Location Resolution</h2>
-<p>GPS tagged tweets are easy. Otherwise some users provide a city or state level location string in a profile, and we simply map to the center of the location. If the tweet happens to contain something that looks like an address we can pick up with a regex we use that instead.</p>
-<h2>Ranking Results</h2>
-<p>In order to present important tweets first in the UI we took a simple approach that proved to be effective. Pagerank like algorithms aren't practical because links between tweets aren't nessacarily common nor indicative of importance. Similarly an approach based on users connections can measure the authority of a source, but this alone is also a poor indicator of importance. 
-We chose a learn a function via linear regression that assigns a real number rank to each crime related tweet based on a similar set of features we used in general classification. This combines learned importance of certain keywords, use authority, and tweet spread.</p>
-<h2>Implementation</h2>
-<p>We implemented TEDAS based on Java and PHP with support of MySQL, Lucene, Twitter API, and Google Maps API. At the time of writing, the system has indexed
-over two million CDE tweets and about a million users’ information, and continues to index at rate of about 30,000 new CDE tweets per day. It supports detecting events related to crimes, accidents, and disasters.</p>
-		</div> <!--/#entry-content-->
-			</div> <!--/#main-->
-</div>  <!--/#post-->		<div class="navigation">
-		</div>
-		</div>
-		
-		<div id="footer">
-			<p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a>, theme by <a href="http://bunnyman.info">tBunnyMan</a>.</p>
-							<script type="text/javascript">
-					var _gaq = _gaq || [];
-					_gaq.push(['_setAccount', 'UA-39357717-1']);
-					_gaq.push(['_trackPageview']);
-					(function() {
-						var ga = document.createElement('script'); 
-						ga.type = 'text/javascript'; ga.async = true;
-						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-					})();
-				</script>
-										<script type="text/javascript">
-    var disqus_shortname = 'ramblesaurus';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>					</div><!-- /#footer -->
-	</div><!-- /#container -->
-	<div style="display:none"></div>
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>    
+ 
+  
+        </div>
+        
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="http://mrgrieves.github.io/">Archives</a>
+                <li><a href="http://mrgrieves.github.io/tags.html">Tags</a>
+                <li><a href="http://mrgrieves.github.io/" rel="alternate">Atom feed</a></li>
+                            </ul>
+            </div>
+
+
+                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                                <li><a href="http://mrgrieves.github.io/category/ai.html">AI</a></li>
+                                   
+            </ul>
+            </div>
+            
+
+            
+
+                        <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                                <li><a href="http://mrgrieves.github.io">github</a></li>
+                            </ul>
+            </div>
+            </div>
+            
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="http://mrgrieves.github.io">Ramblesaurus</a> &copy; Ravi Khadiwala 2012</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+<script>var _gaq=[['_setAccount','UA-39357717-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+ 
 </body>
 </html>

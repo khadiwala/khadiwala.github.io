@@ -1,86 +1,100 @@
+    <link rel="stylesheet" href="/theme/ipython.css">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-				<title>Ramblesaurus &mdash; That's What She Said</title>
-		<meta charset="utf-8" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
-		<!-- Using MathJax, with the delimiters $ -->
-		<!-- Conflict with pygments for the .mo and .mi -->
-		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-		  "HTML-CSS": {
-		  styles: {
-		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-		  },
-		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
-		  });
-		  MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
-		  var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
-		  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
-		  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
-		  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
-		  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
-		  });
-		  MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
-		  var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
-		  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
-		  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
-		  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
-		  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
-		  });
-		</script>
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-		<link rel='stylesheet' id='oswald-css'  href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2' type='text/css' media='all' />
-		<style type="text/css">
-			body.custom-background { background-color: #f5f5f5; }
-		</style>
-		<link rel="alternate" type="application/atom+xml"
-			title="Ramblesaurus — Flux Atom"
-			href="/" /> 
-				<!--[if lte IE 8]><script src="/theme/js/html5shiv.js"></script><![endif]-->
-				</head>
+    <meta charset="utf-8">
+    <title>Ramblesaurus</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ravi Khadiwala">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body class="home blog custom-background " >
-	<div id="container">
-		<div id="header">
-				<h1 id="site-title"><a href="">Ramblesaurus</a></h1>
-						</div><!-- /#banner -->
-		
-		<div id="menu">
-			<div class="menu-navigation-container">
-				<ul id="menu-navigation" class="menu">
-										  						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pages/about-me.html">"About Me"</a></li>
-					  										  						<li class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/category/ai.html">AI</a></li>
-					  										
-				</ul>
-			</div> <!--/#menu-navigation-container-->
-		</div><!-- /#menu -->
-		
-		<div class="page-title">
-					</div>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://mrgrieves.github.io/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="http://mrgrieves.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/local.css" rel="stylesheet">
+    <link href="http://mrgrieves.github.io/theme/pygments.css" rel="stylesheet">
+
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	  "HTML-CSS": {
+	  styles: {
+	  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+	  },
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+	  });
+	  MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+	  });
+	  MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
+	  var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
+	  VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+	  VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+	  VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+	  VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+	  });
+	</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="http://mrgrieves.github.io">Ramblesaurus</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+                    
+                            <li><a href="http://mrgrieves.github.io/pages/about.html">About</a></li>
+                        </ul>
+        </div>
+        
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+            <div class='article'>
+        <div class="content-title">
+            <h1>That's What She Said</h1>
+            Fri 17 May 2013
+
+by <a class="url fn" href="http://mrgrieves.github.io/author/ravi-khadiwala.html">Ravi Khadiwala</a>
+ 
+
+
+        </div>
 	
-		<div id="contents">
-			
-<div class="post type-post status-publish format-standard hentry category-general" id="post">
-	<div class="entry-meta">
-		<div class="date"><a href="/thats-what-she-said.html">Fri 17 May 2013</a></div>
-				<span class="byline">By <a href="/author/ravi-khadiwala.html">Ravi Khadiwala</a></span>
-							<div class="comments"><a href="/thats-what-she-said.html#disqus_thread" title="Comment on That's What She Said">comments</a></div>
-							<span class="cat-links"><a href="/category/ai.html" title="View all posts in AI" rel="category tag">AI</a></span>
-			</div> <!-- /#entry-meta -->
-	<div class="main">
-		<h2 class="entry-title">
-			<a href="/thats-what-she-said.html" title="Permalink to That's What She Said" rel="bookmark">That's What She Said</a>
-		</h2>
-		<div class="entry-content">
-			<div class="ipynb"><div class="text_cell_render border-box-sizing rendered_html">
+        <div><div class="ipynb"><div class="text_cell_render border-box-sizing rendered_html">
 <h1 class="ipynb">That's What She Said:</h1>
 <h1 class="ipynb">Automated Detection of Innuendos</h1>
 <p>Here I describe my second pass at writing a classifier that can detect sentences that are likely to contain sexual inuendos. Both implementations can be found on <a href="https://github.com/mrgrieves/ThatsWhatSheSaid/tree/sk-twss">github</a>, as well as this ipython notebook (you'll need the data folder to use this notebook), which is by far the most interesting way to read this post. Although this is pretty much a joke project, since I wrote the original project I've really grown to like the <a href="http://scikit-learn.org/stable/">scikit-learn</a> library, as opposed to using the basic classifiers in nltk. I got substantially better performance and memory usage, and used a cool feature extraction technique that is well suited to bag of words models. Also I learned the wonder that is blogging with ipython notebooks, which is just too cool. Skip to the bottom to see some examples of the classifier in action, or try the old version here <a href="http://twssd.heroku.com">here</a>.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 class="ipynb">Process the Data</h1>
+<h1 class="ipynb">Data</h1>
 <p>The data folder of the github project contains three sources. Two are of negative instances: one scraped from fmylife and the other from texts from last night. The thought here is that these samples would be written a similar tone and style to twss instances without being twss worthy. The positive samples are scraped from twssStories.com. The punctuation has already been processed out, and the data has been slightly cleaned. This <a href="http://blog.echen.me/2011/05/05/twss-building-a-thats-what-she-said-classifier/">data</a> (also availiable in my repo) was scraped by Edwin Chen, and the approach seems to be from this <a href="http://www.aclweb.org/anthology-new/P/P11/P11-2016.pdf">paper</a></p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
@@ -1017,55 +1031,79 @@ contains(girlfriend) = True                0 : 1      =      9.5 : 1.0
 </code></pre>
 <p>This is the ranked list of the 100 most informative features when I did this experiment with naieve bayes. The first column is the feature, the second column the ratio of positives to negatives or negatives to positive with that feature present.</p>
 <p>And with that, all possible remnants of humor left in the That's What She Said jokes have been taken out behind the shed and shot.</p>
-</div></div>
-		</div> <!--/#entry-content-->
-			</div> <!--/#main-->
-</div>  <!--/#post-->
-    <link rel="stylesheet" href="/theme/css/ipython.min.css">
-
-	<div id="comments">
-		<div id="respond">
-			<div id="disqus_thread"></div>
-	        <script type="text/javascript">
-	            var disqus_shortname = 'ramblesaurus';
+</div></div></div>
 	
-	            /* * * DON'T EDIT BELOW THIS LINE * * */
-	            (function() {
-	                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-	                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	            })();
-	        </script>
-	        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-		</div><!-- #respond -->					
-</div><!-- #comments -->
+        <hr>
+    	   
+        <h2>Comments</h2>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ramblesaurus'; 
+    var disqus_title = 'That's What She Said';
 
-		</div>
-		
-		<div id="footer">
-			<p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a>, theme by <a href="http://bunnyman.info">tBunnyMan</a>.</p>
-							<script type="text/javascript">
-					var _gaq = _gaq || [];
-					_gaq.push(['_setAccount', 'UA-39357717-1']);
-					_gaq.push(['_trackPageview']);
-					(function() {
-						var ga = document.createElement('script'); 
-						ga.type = 'text/javascript'; ga.async = true;
-						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-					})();
-				</script>
-										<script type="text/javascript">
-    var disqus_shortname = 'ramblesaurus';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>					</div><!-- /#footer -->
-	</div><!-- /#container -->
-	<div style="display:none"></div>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+        </div>
+        
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="http://mrgrieves.github.io/">Archives</a>
+                <li><a href="http://mrgrieves.github.io/tags.html">Tags</a>
+                <li><a href="http://mrgrieves.github.io/" rel="alternate">Atom feed</a></li>
+                            </ul>
+            </div>
+
+
+                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                                <li><a href="http://mrgrieves.github.io/category/ai.html">AI</a></li>
+                                   
+            </ul>
+            </div>
+            
+
+            
+
+                        <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                                <li><a href="http://mrgrieves.github.io">github</a></li>
+                            </ul>
+            </div>
+            </div>
+            
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="http://mrgrieves.github.io">Ramblesaurus</a> &copy; Ravi Khadiwala 2012</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+<script>var _gaq=[['_setAccount','UA-39357717-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+ 
 </body>
 </html>
